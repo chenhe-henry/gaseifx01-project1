@@ -1,0 +1,2 @@
+class BodyInfo < ApplicationRecord
+end
