@@ -5,11 +5,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+     <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link"><%= link_to "Home", home_path %></a></li>
+      <li class="nav-item"><a class="nav-link"><%= link_to "BMI Calculator" %></a></li>
+      <li class="nav-item"><a class="nav-link"><%= link_to "Body Measurement" %></a></li>
+      <li class="nav-item"><a class="nav-link"><%= link_to "Warriors Gallary" %></a></li>
+      <li class="nav-item"><a class="nav-link"><%= link_to "Login/Signup" %></a></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
