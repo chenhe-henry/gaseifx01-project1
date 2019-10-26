@@ -18,27 +18,29 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item, navigation active">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
   
-      <li class="nav-item">
+      <li class="nav-item, navigation">
         <a class="nav-link" href="/body_measurement">Body Measurement</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item, navigation">
         <a class="nav-link" href="/bmi_calculator">BMI Calculator</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item, navigation">
         <a class="nav-link" href="/warriors_gallery">Warriors' Gallery</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item, login">
       <a class="nav-link">
         <% if current_user %>
         Logged in as <%= current_user.email %>.
-        <%= link_to "Log Out", logout_path %>
+        <b><%= link_to "My Account", mypage_path %></b>
+        <br />
+        <b><%= link_to "Log Out", logout_path %></b>
         <% else %>
-        <%= link_to "Sign Up", signup_path %> or
-        <%= link_to "Log In", login_path %>
+        <b><%= link_to "Sign Up", signup_path %></b> or
+        <b><%= link_to "Log In", login_path %></b>
         <% end %>
         </a>
       </li>

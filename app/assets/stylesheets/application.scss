@@ -17,10 +17,16 @@
 
 
 nav {
-    height: 5%;
+    height: 10%;
 }
-
-li:hover {
+.navigation {
+    margin: auto;
+    padding: 40px;
+}
+.login {
+    margin: auto;
+}
+.navigation:hover {
     background-color: lightblue;
 }
 
