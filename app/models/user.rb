@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-    belongs_to :gender
-    belongs_to :contact_info
-    belongs_to :location
     has_secure_password
+  
+    # attr_accessible :email, :password, :password_confirmation
+  
+    # validates_uniqueness_of :email
 end

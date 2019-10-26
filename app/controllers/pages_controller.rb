@@ -19,6 +19,11 @@ class PagesController < ApplicationController
     def bmi_calculator
         @title = 'Welcome to BMI calculator app!';
         @content = 'This is the BMI calculator app.';
+        @bmi_explaination_title = 'What’s BMI?';
+        @bmi_explaination = 'BMI compares your weight to your height, 
+        and is calculated by dividing your weight (in kilograms) by your height (in metres squared). 
+        It gives you an idea of whether you’re "underweight", a "healthy" weight, "overweight", or "obese" for your height. 
+        BMI is one type of tool to help health professionals assess the risk for chronic disease.'
     end
 
     def warriors_gallery

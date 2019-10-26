@@ -59,4 +59,6 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'bcrypt', '~> 3.1.7'
 
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
 gem 'jquery-rails'
