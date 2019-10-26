@@ -2,3 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.testBox {
+    background-color: #d5d9de;
+    border: 1px solid #a9acb0;
+    padding: 10px 20px;
+}
+
+.alogo {
+    width:auto;
+    height: 150px;
+}
+
+.banner {
+    height: 150px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lsfr9lYM4Sm-tjrlqdKN_8e69FaNmdSyhZMfvjLOJv60n2yb&s');
+    background-size: cover;
+    background-position: center -100px;
+}
+
+.callOuts {
+    border: 1px solid #d7d8da;
+}
+
+.bottomArea {
+    background-color: #424243;
+    color: #fff;
+    height: 250px;
+    font-size: .8rem;
+}
+
+.bottomArea p {
+    font-size: .7rem;
+}
+
+.bottomArea h5 {
+    font-weight: 800;
+    font-size: 16px;
+}
