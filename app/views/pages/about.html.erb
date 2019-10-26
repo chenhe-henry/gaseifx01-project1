@@ -4,47 +4,63 @@
 
 <!-- Logo -->
 <div class="d-flex justify-content-center">
-    <%= image_tag('logos/logo.jpeg', :class => 'alogo') %>
+    <%= image_tag('logos/logo.jpeg', :class => 'alogo p-3') %>
 </div>
 <!-- Banner -->
 <div class="d-flex flex-row banner"></div>
 <!-- Cards -->
-<div class="d-flex flex-row justify-content-around">
-    <div class="d-flex callOuts flex-column">
-    <%= image_tag('logos/bmi.jpeg', :class => 'd-block') %>
+<div class="d-flex flex-row justify-content-around my-3 px-5 text-center flex-wrap">
+    <div class="d-flex callOuts flex-column p-4 m-2 flex-fill">
+    <%= image_tag('logos/bmi.jpeg', :class => 'd-block mx-auto', height:'200px') %>
     <h3>BMI calculator</h3>
     <p>Calculate your BMI, get know your health condition.</p>
     </div> 
-    <div class="d-flex callOuts flex-column">
-    <%= image_tag('logos/body_measurement.jpeg', :class => 'd-block') %>
+    <div class="d-flex callOuts flex-column p-4 m-2 flex-fill">
+    <%= image_tag('logos/body_measurement.jpeg', :class => 'd-block mx-auto', height:'200px') %>
     <h3>Body Measurement</h3>
     <p>Record and track your weight every single day.</p>
     </div> 
-    <div class="d-flex callOuts flex-column">
-    <%= image_tag('logos/warriors_gallery.jpeg', :class => 'd-block') %>
+    <div class="d-flex callOuts flex-column p-4 m-2 flex-fill">
+    <%= image_tag('logos/warriors_gallery.jpeg', :class => 'd-block mx-auto', height:'200px') %>
     <h3>Warriors Gallary</h3>
     <p>Share us your colorful life!</p>
     </div> 
 </div>
-
-<div class="d-flex">
-    <div class="w-25">
+<!-- Text and Image -->
+<div class="d-flex flex-column flex-sm-row align-items-center px-2 px-sm-5 mb-3">
+    <div class="w-25 mr-3">
        <%= image_tag('logos/healthlife.jpeg', :class => 'img-fluid') %> 
     </div>
-    <div class="w-75">
+    <div class="w-75 p-3">
         <h4>Title Section</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <a href="#" class="btn btn-primary">Learn More</a>
     </div>
 </div>
-
-<div class="d-flex bottomArea">
+<!--<div class="d-flex flex-row flex-wrap">
+    <div class="testBox">Test 1</div> 
+    <div class="testBox">Test 2</div> 
+    <div class="testBox">Test 3</div>
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div>  
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div>
+    <div class="testBox">Test 3</div>  
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div> 
+    <div class="testBox">Test 3</div> 
+</div>-->
+<!-- bottom -->
+<div class="d-flex bottomArea p-3">
     <div class="w-60">
     <%= image_tag('logos/logo.jpeg', :class => 'img-fluid h-25') %> 
     <h5>About Us</h5>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column mt-3 ml-5">
         <h5>Contact Us</h5>
         <div>123 Carlingford Road</div>
         <div>555-55555</div>
@@ -53,8 +69,4 @@
 </div>
 
 
-<!--<div class="d-flex flex-row">
-    <div class="testBox">Test 1</div> 
-    <div class="testBox">Test 2</div> 
-    <div class="testBox">Test 3</div> 
-</div>-->
+
