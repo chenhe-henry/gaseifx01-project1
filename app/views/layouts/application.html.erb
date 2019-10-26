@@ -4,6 +4,7 @@
     <title>HealthTracking</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -37,7 +38,9 @@
       <a class="nav-link">
         <% if current_user %>
         Logged in as <%= current_user.email %>.
-        <b><%= link_to "My Account", mypage_path %></b>
+        <b><%= link_to "My Dashboard", mypage_path %></b>
+        <br />
+        <b><%= link_to "Settings", mysetting_path %></b>
         <br />
         <b><%= link_to "Log Out", logout_path %></b>
         <% else %>

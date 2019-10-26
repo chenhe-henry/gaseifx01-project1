@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'mypage', to: 'about#me', as: 'mypage'
+  get 'mysetting', to: 'about#setting', as: 'mysetting'
 
 resources :users
 resources :sessions

@@ -3,4 +3,8 @@ class AboutController < ApplicationController
   def me
     @logged_in_user = User.find_by :id => session[:user_id]
   end
+
+  def setting
+    @logged_in_user = User.find_by :id => session[:user_id]
+  end
 end
