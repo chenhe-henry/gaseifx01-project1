@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
 
 
 nav {
@@ -36,5 +35,6 @@ li {
 
 .logo{
     text-align: center;
+    float: right;
     
 }

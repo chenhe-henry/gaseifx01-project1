@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'body_measurement' => 'pages#body_measurement'
   get 'bmi_calculator' => 'pages#bmi_calculator'
   get 'warriors_gallery' => 'pages#warriors_gallery'
-  get 'pages/home'
+  # get 'pages/home'
   get 'about' => 'pages#about'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
