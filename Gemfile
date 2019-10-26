@@ -62,3 +62,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'jquery-rails'
+
+# gem :production do
+# gem 'rails_12factor'
+# end 
