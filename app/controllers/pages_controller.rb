@@ -4,7 +4,7 @@ class PagesController < ApplicationController
         @user = User.all
         @location = Location.all
         @logged_in_user = User.find_by :id => session[:user_id]
-        @top = User.order(name: :desc)
+        @top = User.order(id: :desc).limit(5)
     end
 
     
