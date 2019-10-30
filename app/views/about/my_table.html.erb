@@ -1,0 +1,31 @@
+<h2>Hi, <%= @logged_in_user.name %>, have a look at what you have done so far.</h2>
+
+<table class="table table-hover">
+<tr>
+<th scope="col">Weight (kg)</th>
+<th scope="col">BMI</th>
+
+</tr>
+<tr>
+<td><%= @logged_in_user.initial_weight %></td>
+<td><%= @bmi %></td>
+
+</tr>
+</table>
+
+
+
+
+<% if @bmi < 27%>
+<h2>Hello</h2>
+<% else %>
+<h2>Good</h2>
+<% end %>
+
+<%= form_for @logged_in_user do |f| %>
+    <div class="field">
+        <%= f.label :initial_weight %>
+        <%= f.text_field :initial_weight %> kg
+    </div>
+    <div class="actions"><%= f.submit "Update" %></div>
+<% end %>

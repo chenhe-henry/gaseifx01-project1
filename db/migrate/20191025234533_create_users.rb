@@ -6,7 +6,9 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :gender
       t.string :city
       t.string :password_digest
-
+      t.float :height
+      t.float :initial_weight
+      t.float :goal
       t.timestamps
     end
   end

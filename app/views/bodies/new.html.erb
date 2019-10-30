@@ -1,0 +1,9 @@
+<h1>Update</h1>
+
+<%= form_for @body do |f| %>
+    <div class="field">
+        <%= f.label :weight %><br />
+        <%= f.text_field :weight %>
+    </div>
+    <div class="actions"><%= f.submit "Update" %></div>
+<% end %>

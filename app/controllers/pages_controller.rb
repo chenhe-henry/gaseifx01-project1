@@ -2,12 +2,9 @@ class PagesController < ApplicationController
     def home
         @content = 'Do you record your health info today?'
         @user = User.all
-        @location = Location.all
         @logged_in_user = User.find_by :id => session[:user_id]
         @top = User.order(id: :desc).limit(5)
     end
-
-    
 
     def about
         @title = 'Welcome to Health tracking app!';
@@ -17,6 +14,8 @@ class PagesController < ApplicationController
     def body_measurement
         @title = 'Welcome to body measurement app!';
         @content = 'This is the body measurement app.';
+        @logged_in_user = User.find_by :id => session[:user_id]
+
     end
 
     def bmi_calculator
@@ -34,6 +33,5 @@ class PagesController < ApplicationController
         @content = 'This is the warriors gallery app.';
     end
 
-    
 end
 

@@ -3,12 +3,13 @@
 
 <%= form_with(url: "/login", method: "post") do %>
   <div>
-    <label>Weight<input type="weight" name="weight"/> kg</label>
+    <label>Weight<input type="weight" name="weight" /> kg</label>
   </div>
   <div>
     <label>Height<input type="height" name="height"/> cm</label>
     <div>
       <input class="btn btn-primary" type="submit" value="Calculate Your BMI"/>
+      
     </div>
   </div>
 <% end %>
@@ -17,3 +18,4 @@
 <h2><%= @bmi_explaination_title%></h2>
 <p><%= @bmi_explaination%></p>
 </div>
+

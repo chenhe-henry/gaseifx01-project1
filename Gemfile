@@ -63,6 +63,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'jquery-rails'
 
-# gem :production do
-# gem 'rails_12factor'
-# end 
+gem 'mini_magick'
+
+gem "carrierwave"
+
+
+gem "aws-sdk-s3", require: false

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_25_234533) do
+ActiveRecord::Schema.define(version: 2019_10_30_102845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,37 +36,9 @@ ActiveRecord::Schema.define(version: 2019_10_25_234533) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "body_infos", force: :cascade do |t|
-    t.integer "weight"
-    t.integer "goal"
-    t.integer "gender_id"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "contact_infos", force: :cascade do |t|
-    t.text "email_address"
-    t.integer "phone_number"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "genders", force: :cascade do |t|
-    t.text "gender"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.text "location"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "update_body_infos", force: :cascade do |t|
-    t.integer "weight"
+  create_table "bodies", force: :cascade do |t|
+    t.float "weight"
+    t.float "bmi"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -78,6 +50,9 @@ ActiveRecord::Schema.define(version: 2019_10_25_234533) do
     t.string "gender"
     t.string "city"
     t.string "password_digest"
+    t.float "height"
+    t.float "initial_weight"
+    t.float "goal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

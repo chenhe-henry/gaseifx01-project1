@@ -1,0 +1,49 @@
+/* line 5, app/assets/stylesheets/pages.scss */
+.testBox {
+  background-color: #d5d9de;
+  border: 1px solid #a9acb0;
+  padding: 10px 20px;
+}
+
+/* line 11, app/assets/stylesheets/pages.scss */
+.alogo {
+  width: auto;
+  height: 150px;
+}
+
+/* line 16, app/assets/stylesheets/pages.scss */
+.banner {
+  height: 150px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lsfr9lYM4Sm-tjrlqdKN_8e69FaNmdSyhZMfvjLOJv60n2yb&s");
+  background-size: cover;
+  background-position: center -100px;
+}
+
+/* line 23, app/assets/stylesheets/pages.scss */
+.callOuts {
+  border: 1px solid #d7d8da;
+}
+
+/* line 27, app/assets/stylesheets/pages.scss */
+.bottomArea {
+  background-color: #424243;
+  color: #fff;
+  height: 250px;
+  font-size: .8rem;
+}
+
+/* line 34, app/assets/stylesheets/pages.scss */
+.bottomArea p {
+  font-size: .7rem;
+}
+
+/* line 38, app/assets/stylesheets/pages.scss */
+.bottomArea h5 {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* line 43, app/assets/stylesheets/pages.scss */
+.testRow {
+  height: 200px;
+}

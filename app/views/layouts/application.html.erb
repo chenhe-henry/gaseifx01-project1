@@ -26,7 +26,7 @@
       </li>
   
       <li class="nav-item, navigation">
-        <a class="nav-link" href="/body_measurement">Body Measurement</a>
+        <a class="nav-link" href="/body_measurement_public">Body Measurement</a>
       </li>
       <li class="nav-item, navigation">
         <a class="nav-link" href="/bmi_calculator">BMI Calculator</a>
@@ -39,6 +39,8 @@
         <% if current_user %>
         Logged in as <%= current_user.email %>.
         <b><%= link_to "My Dashboard", mypage_path %></b>
+        <br />
+        <b><%= link_to "My Table", mytable_path %></b>
         <br />
         <b><%= link_to "Settings", mysetting_path %></b>
         <br />

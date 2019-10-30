@@ -6,14 +6,20 @@
       <h2>Form is invalid</h2>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <div class="alert alert-danger"><%= message %></div>
         <% end %>
       </ul>
     </div>
   <% end %>
+
+
     <div class="field">
         <%= f.label :name %><br />
         <%= f.text_field :name %>
+    </div>
+    <div class="field">
+        <%= f.label :"Profile Photo" %><br />
+        <%= f.file_field :avatar %>
     </div>
     <div class="field">
         <%= f.label :email %><br />
@@ -26,6 +32,18 @@
     <div class="field">
         <%= f.label :city %><br />
         <%= f.text_field :city %>
+    </div>
+    <div class="field">
+        <%= f.label :height %><br />
+        <%= f.text_field :height %> m
+    </div>
+    <div class="field">
+        <%= f.label :initial_weight %><br />
+        <%= f.text_field :initial_weight %> kg
+    </div>
+    <div class="field">
+        <%= f.label :goal %><br />
+        <%= f.text_field :goal %> kg
     </div>
     <div class="field">
         <%= f.label :password %><br />

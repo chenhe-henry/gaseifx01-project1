@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/users -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HealthTracking</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="/TDtqTsVHAfkfr0wIi9D5BdJBR8+DCO0kSaKVdV38wPx1pn7M8PoIDFeL+JzcK62ujz4SK3W2Zo106k6vLoC7g==">
+    
+    
+    <link rel="stylesheet" media="all" href="./HealthTracking_files/about.self-81ba7a8f4ecfe14166e482201430c7e9feec20102270c1bd225be3132511b11c.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./HealthTracking_files/bodies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./HealthTracking_files/pages.self-9c9ad8d909be6058d4868b5973725bc5a8f788ad0a33527cc909b2e70f3709cb.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./HealthTracking_files/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./HealthTracking_files/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./HealthTracking_files/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./HealthTracking_files/application.self-c176dc548a2ab287049dfbec25e75622d51f1cc0bfead4137a470cb4d1cda7d0.css" data-turbolinks-track="reload">
+    <script src="./HealthTracking_files/application-bbbfb6b07f9caf41483f.js" data-turbolinks-track="reload"></script>
+
+    <link rel="stylesheet" href="./HealthTracking_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="./HealthTracking_files/chart.js@2.8.0"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:3000/about">HealthTracking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item, navigation active">
+        <a class="nav-link" href="http://localhost:3000/">Home <span class="sr-only">(current)</span></a>
+      </li>
+  
+      <li class="nav-item, navigation">
+        <a class="nav-link" href="http://localhost:3000/body_measurement_public">Body Measurement</a>
+      </li>
+      <li class="nav-item, navigation">
+        <a class="nav-link" href="http://localhost:3000/bmi_calculator">BMI Calculator</a>
+      </li>
+      <li class="nav-item, navigation">
+        <a class="nav-link" href="http://localhost:3000/warriors_gallery">Warriors' Gallery</a>
+      </li>
+      <li class="nav-item, login">
+      <a class="nav-link">
+        <b></b></a><b><a href="http://localhost:3000/signup">Sign Up</a></b> or
+        <b><a href="http://localhost:3000/login">Log In</a></b>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--<div class="logo">
+<img width="300px" src="/assets/logos/logo-4cd50455c1b093de775f123d61c944b1612de5f584ff819ae95a3ca9627bceb2.jpg" />
+</div>-->
+    <h1>Sign Up</h1>
+
+<form class="new_user" id="new_user" action="http://localhost:3000/users" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="/TDtqTsVHAfkfr0wIi9D5BdJBR8+DCO0kSaKVdV38wPx1pn7M8PoIDFeL+JzcK62ujz4SK3W2Zo106k6vLoC7g==">
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+          <div class="alert alert-danger">Gender must exist</div>
+      </ul>
+    </div>
+  
+    <div class="field">
+        <label for="user_name">Name</label><br>
+        <input type="text" value="Chen" name="user[name]" id="user_name">
+    </div>
+    <div class="field">
+        <label for="user_email">Email</label><br>
+        <input type="text" value="chenhe.elec@gmail.com" name="user[email]" id="user_email">
+    </div>
+    <div class="field">
+        <div class="field_with_errors"><label for="user_gender">Gender</label></div><br>
+        <div class="field_with_errors"><input type="text" name="user[gender]" id="user_gender"></div>
+    </div>
+    <div class="field">
+        <label for="user_city">City</label><br>
+        <input type="text" value="Sydney" name="user[city]" id="user_city">
+    </div>
+    <div class="field">
+        <label for="user_height">Height</label><br>
+        <input type="text" value="1.74" name="user[height]" id="user_height"> m
+    </div>
+    <div class="field">
+        <label for="user_initial_weight">Initial weight</label><br>
+        <input type="text" value="83.5" name="user[initial_weight]" id="user_initial_weight"> kg
+    </div>
+    <div class="field">
+        <label for="user_goal">Goal</label><br>
+        <input type="text" value="75" name="user[goal]" id="user_goal"> kg
+    </div>
+    <div class="field">
+        <label for="user_password">Password</label><br>
+        <input type="password" name="user[password]" id="user_password">
+    </div>
+    <div class="field">
+        <label for="user_password_confirmation">Password confirmation</label><br>
+        <input type="password" name="user[password_confirmation]" id="user_password_confirmation">
+    </div>
+    <div class="actions"><input type="submit" name="commit" value="Sign Up" data-disable-with="Sign Up"></div>
+</form>
+  
+
+</body></html>
