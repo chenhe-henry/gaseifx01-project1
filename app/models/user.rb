@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    include Gravtastic
+    gravtastic
     has_secure_password
     # validates should exist in each line
     validates :name, presence: true
@@ -8,4 +10,7 @@ class User < ApplicationRecord
     # validates_uniqueness_of :email
     has_many :body
     has_one_attached :avatar
+
+
+    
 end

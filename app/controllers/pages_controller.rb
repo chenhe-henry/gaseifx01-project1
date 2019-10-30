@@ -31,6 +31,7 @@ class PagesController < ApplicationController
     def warriors_gallery
         @title = 'Welcome to warriors gallery app!';
         @content = 'This is the warriors gallery app.';
+      
     end
 
 end

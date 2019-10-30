@@ -8,6 +8,7 @@
 <th scope="col">City</th>
 <th scope="col">Gender</th>
 <th scope="col">Created at</th>
+<th scope="col">Updated at</th>
 </tr>
 <% @users.each do |user| %>
 <tr>
@@ -16,7 +17,8 @@
 <td><%= user.email %></td>
 <td><%= user.city %></td>
 <td><%= user.gender %></td>
-<td><%= user.created_at %></td>
+<td><%= user.created_at + 36000 %></td>
+<td><%= user.updated_at + 36000 %></td>
 </tr>
 <% end %>
 </table>
