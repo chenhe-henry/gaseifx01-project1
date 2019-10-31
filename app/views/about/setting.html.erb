@@ -10,23 +10,9 @@
 <p><b>Email:</b> <%= @logged_in_user.email %></p>
 <p><b>City:</b> <%= @logged_in_user.city %></p>
 <p><b>Gender:</b> <%= @logged_in_user.gender %></p>
-<p><b>Height:</b> <%= @logged_in_user.height.to_f %></p>
-<p><b>Weight:</b> <%= @logged_in_user.initial_weight.to_f %></p>
-<p><b>BMI:</b> <%= @bmi.to_f %></p>
 <p><b>Created at:</b> <%= localize(@logged_in_user.created_at + 36000, :format => :long) %></p>
 
 
 <hr>
 
-<h1>Update My Profile</h1>
-<%= form_for @logged_in_user do |f| %>
-    <div class="field">
-        <%= f.label :initial_weight %>
-        <%= f.text_field :initial_weight %> kg
-    </div>
-    <div class="field">
-        <%= f.label :current_weight %>
-        <%= f.text_field :initial_weight %> kg
-    </div>
-    <div class="actions"><%= f.submit "Sign Up" %></div>
-<% end %>
+

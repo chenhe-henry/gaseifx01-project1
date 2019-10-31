@@ -11,11 +11,28 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
-    def destroy
-        @user = User.find(params[:id])
-        @user.destroy
-        redirect_to index_url
+    
+
+    def update
+         @user = User.find(params[:id])
+        form_params = params.require(:user).permit(:name, :avatar, :email, :city)
+        puts "===================================="
+        puts form_params.inspect
+        puts "==================================="
+        @user.name = form_params[:name]
+        @user.avatar = form_params[:avatar]
+        @user.email = form_params[:email]
+        @user.city = form_params[:city]
+        # @user.update(form_params)
+        
+        redirect_to mysetting_path, notice: "Thank you for updating!"  
+
     end
+
+    def edit
+       @user = User.find_by :id => session[:user_id]
+    end
+    
 
     def create
         form_params = get_create_user_form_params()

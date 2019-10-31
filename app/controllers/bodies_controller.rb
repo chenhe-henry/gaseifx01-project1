@@ -22,8 +22,8 @@ class BodiesController < ApplicationController
         redirect_to bodies_path, notice: "Thank you for updating!"  
     end
 
-    private
-    def get_create_user_form_params
-        params.permit(:weight)
-    end
+    # private
+    # def get_create_user_form_params
+    #     params.permit(:weight)
+    # end
 end

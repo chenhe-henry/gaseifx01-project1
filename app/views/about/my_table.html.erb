@@ -1,25 +1,29 @@
 <h2>Hi, <%= @logged_in_user.name %>, have a look at what you have done so far.</h2>
 
+<h1>All Updated Users</h1>
 <table class="table table-hover">
 <tr>
-<th scope="col">Weight (kg)</th>
-<th scope="col">BMI</th>
-
+<th scope="col">Id</th>
+<th scope="col">Weight</th>
+<th scope="col">Height</th>
+<th scope="col">User Id</th>
+<th scope="col">Created at</th>
 </tr>
+<% @bodies.each do |body| %>
 <tr>
-<td><%= @logged_in_user.initial_weight %></td>
-<td><%= @bmi %></td>
-
+<td><%= body.id %></td>
+<td><%= body.weight %></td>
+<td><%= body.height %></td>
+<td><%= body.user_id %></td>
+<td><%= localize(body.created_at + 36000, :format => :long) %></td>
+<td><%= link_to 'Delete', body_path(@bodies), method: 'delete' %></td>
 </tr>
+<% end %>
 </table>
 
 
 
 
-<% if @bmi < 27%>
-<h2>Hello</h2>
-<% else %>
-<h2>Good</h2>
-<% end %>
+
 
 
