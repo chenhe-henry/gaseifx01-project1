@@ -16,6 +16,14 @@ class PagesController < ApplicationController
         @content = 'This is the body measurement app.';
         @logged_in_user = User.find_by :id => session[:user_id]
 
+
+
+    end
+
+    def body_measurement_public
+        if current_user
+            redirect_to '/mysetting'
+        end
     end
 
     def bmi_calculator

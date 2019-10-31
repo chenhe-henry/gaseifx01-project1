@@ -17,6 +17,7 @@ class UsersController < ApplicationController
          @user = User.find(params[:id])
         form_params = params.require(:user).permit(:name, :avatar, :email, :city)
         puts "===================================="
+        puts "USER ID: " + @user.id.to_s
         puts form_params.inspect
         puts "==================================="
         @user.name = form_params[:name]
@@ -24,9 +25,13 @@ class UsersController < ApplicationController
         @user.email = form_params[:email]
         @user.city = form_params[:city]
         # @user.update(form_params)
-        
+        @user.save
+        # if @user.update(form_params)
         redirect_to mysetting_path, notice: "Thank you for updating!"  
-
+        # else
+         #   flash[:errors] = @user.errors.full_messages
+        #    render :edit
+        # end
     end
 
     def edit

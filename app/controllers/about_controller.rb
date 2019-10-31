@@ -7,16 +7,15 @@ class AboutController < ApplicationController
   end
 
   def my_table
-    @bodies = Body.all
+    @bodies = Body.where(:user_id => session[:user_id]) 
+        puts "===================================="
+        puts @bodies.inspect
+        puts "==================================="
     @logged_in_user = User.find_by :id => session[:user_id]
     # @bmi = @logged_in_user.initial_weight/@logged_in_user.height/@logged_in_user.height
   end
 
-  def destroy
-        @body = Body.find(params[:id])
-        @body.destroy
-        redirect_to mytable_url
-  end
+
 
   def setting
     @logged_in_user = User.find_by :id => session[:user_id]

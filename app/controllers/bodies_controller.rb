@@ -5,6 +5,13 @@ class BodiesController < ApplicationController
     def index
         @bodies = Body.all
     end
+
+      def destroy
+        @body = Body.find(params[:id])
+        @body.destroy
+        redirect_to mytable_url
+  end
+  
     def create
 
         form_params = params.require(:body).permit(:weight, :height)

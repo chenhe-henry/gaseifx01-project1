@@ -76,3 +76,5 @@ gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'gravtastic'
 
 gem 'simple_form'
+
+gem "chartkick"

@@ -9,6 +9,7 @@
 <th scope="col">User Id</th>
 <th scope="col">Created at</th>
 </tr>
+if current_user
 <% @bodies.each do |body| %>
 <tr>
 <td><%= body.id %></td>
@@ -16,8 +17,9 @@
 <td><%= body.height %></td>
 <td><%= body.user_id %></td>
 <td><%= localize(body.created_at + 36000, :format => :long) %></td>
-<td><%= link_to 'Delete', body_path(@bodies), method: 'delete' %></td>
+<td><%= link_to 'Delete', body_path(body), method: 'delete' %></td>
 </tr>
+end 
 <% end %>
 </table>
 

@@ -1,21 +1,36 @@
 <h1><%= @title %></h1>
 <p><%= @content %></p>
 
-<%= form_with(url: "/login", method: "post") do %>
+<form>
   <div>
-    <label>Weight<input type="weight" name="weight" /> kg</label>
+    <label>Weight<input id="frmInputWeight" type="weight" name="weight" /> kg</label>
   </div>
   <div>
-    <label>Height<input type="height" name="height"/> cm</label>
+    <label>Height<input id="frmInputHeight" type="height" name="height"/> cm</label>
     <div>
       <input class="btn btn-primary" type="submit" value="Calculate Your BMI"/>
-      
     </div>
   </div>
-<% end %>
+</form>
 
-<div class="about">
-<h2><%= @bmi_explaination_title%></h2>
-<p><%= @bmi_explaination%></p>
+<div>
+  <h1>BMI RESULT: <span id="bmiresult"></span></h1>
 </div>
 
+<div class="about">
+  <h2><%= @bmi_explaination_title%></h2>
+  <p><%= @bmi_explaination%></p>
+</div>
+
+<script>
+  var inputWeight = document.getElementById('frmInputWeight');
+  var inputHeight = document.getElementById('frmInputHeight');
+  var resultElem = document.getElementById('bmiresult');
+
+  // TODO: add event listener for form submit or button click or something
+  //  - get text value from inputWidth
+  // - get text value from inputHeight
+  // - calculate tehe bmi with the numbers
+  // - resultElem.innterHTML = the calculated number
+
+</script>
