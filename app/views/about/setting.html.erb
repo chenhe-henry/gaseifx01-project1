@@ -13,7 +13,9 @@
 <p><b>Height:</b> <%= @logged_in_user.height.to_f %></p>
 <p><b>Weight:</b> <%= @logged_in_user.initial_weight.to_f %></p>
 <p><b>BMI:</b> <%= @bmi.to_f %></p>
-<p><b>Created at:</b> <%= @logged_in_user.created_at %></p>
+<p><b>Created at:</b> <%= localize(@logged_in_user.created_at + 36000, :format => :long) %></p>
+
+
 <hr>
 
 <h1>Update My Profile</h1>

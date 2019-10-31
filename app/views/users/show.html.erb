@@ -8,6 +8,6 @@
 <p><b>Email:</b> <%= @user.email %></p>
 <p><b>City:</b> <%= @user.city %></p>
 <p><b>Gender:</b> <%= @user.gender%></p>
-<p><b>Created at:</b> <%= @user.created_at %></p>
+<p><b>Created at:</b> <%= localize(@user.created_at + 36000, :format => :long) %></p>
 
 <%= link_to 'Delete', user_path(@user), method: 'delete' %>

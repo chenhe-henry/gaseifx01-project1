@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_102845) do
   create_table "bodies", force: :cascade do |t|
     t.float "weight"
     t.float "bmi"
+    t.float "height"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -50,9 +51,6 @@ ActiveRecord::Schema.define(version: 2019_10_30_102845) do
     t.string "gender"
     t.string "city"
     t.string "password_digest"
-    t.float "height"
-    t.float "initial_weight"
-    t.float "goal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -17,8 +17,9 @@
 <td><%= user.email %></td>
 <td><%= user.city %></td>
 <td><%= user.gender %></td>
-<td><%= user.created_at + 36000 %></td>
-<td><%= user.updated_at + 36000 %></td>
+<td><%= localize(user.created_at + 36000, :format => :long) %></td>
+<td><%= localize(user.updated_at + 36000, :format => :long) %></td>
 </tr>
 <% end %>
 </table>
+

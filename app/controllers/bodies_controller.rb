@@ -6,14 +6,21 @@ class BodiesController < ApplicationController
         @bodies = Body.all
     end
     def create
-        form_params = get_create_user_form_params()
+
+        form_params = params.require(:body).permit(:weight, :height)
+
+        puts "===================================="
+        puts form_params.inspect
+        puts "==================================="
+
         @body = Body.new
         @body.weight = form_params[:weight]
-      if @body.save
-        session[:user_id] = @body.user_id
-        redirect_to bodyindex_url, notice: "Thank you for updating!"  
-      end
+        @body.user_id = session[:user_id]
+        @body.save
+
+        redirect_to bodies_path, notice: "Thank you for updating!"  
     end
+
     private
     def get_create_user_form_params
         params.permit(:weight)

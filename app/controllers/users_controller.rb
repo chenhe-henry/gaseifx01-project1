@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     private
    
     def get_create_user_form_params
-        params.require(:user).permit(:name, :avatar, :email, :gender, :city, :height, :initial_weight, :goal, :password, :password_confirmation)
+        params.require(:user).permit(:name, :avatar, :email, :gender, :city, :password, :password_confirmation)
     end
 
   
