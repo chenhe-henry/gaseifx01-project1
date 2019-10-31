@@ -15,6 +15,7 @@ class BodiesController < ApplicationController
 
         @body = Body.new
         @body.weight = form_params[:weight]
+        @body.height = form_params[:height]
         @body.user_id = session[:user_id]
         @body.save
 
