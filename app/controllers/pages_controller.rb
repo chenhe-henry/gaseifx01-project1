@@ -11,18 +11,17 @@ class PagesController < ApplicationController
         @content = 'This wonderful app will help you to achieve your goal.';
     end
 
-    def body_measurement
-        @title = 'Welcome to body measurement app!';
-        @content = 'This is the body measurement app.';
-        @logged_in_user = User.find_by :id => session[:user_id]
-
-
-
-    end
+    # def body_measurement_public
+    #     @title = 'Welcome to body measurement app!';
+    #     @content = 'This is the body measurement app.';
+    #     @logged_in_user = User.find_by :id => session[:user_id]
+    # end
 
     def body_measurement_public
+
         if current_user
-            redirect_to '/mysetting'
+            redirect_to '/body_measurement'
+      
         end
     end
 

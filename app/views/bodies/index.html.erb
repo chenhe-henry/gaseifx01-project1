@@ -14,7 +14,7 @@
 <td><%= body.weight %></td>
 <td><%= body.height %></td>
 <td><%= body.user_id %></td>
-<td><%= body.created_at %></td>
+<td><%= localize(body.created_at + 39600, :format => :long) %></td>
 </tr>
 <% end %>
 </table>

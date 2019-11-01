@@ -11,7 +11,7 @@ class BodiesController < ApplicationController
         @body.destroy
         redirect_to mytable_url
   end
-  
+    
     def create
 
         form_params = params.require(:body).permit(:weight, :height)
@@ -26,7 +26,7 @@ class BodiesController < ApplicationController
         @body.user_id = session[:user_id]
         @body.save
 
-        redirect_to bodies_path, notice: "Thank you for updating!"  
+        redirect_to "/mytable", notice: "Thank you for updating!"  
     end
 
     # private

@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root :to => 'pages#home'
-  get 'body_measurement_public' => 'pages#body_measurement_public'
+  get 'body_measurement' => 'bodies#new'
   get 'bmi_calculator' => 'pages#bmi_calculator'
   get 'warriors_gallery' => 'pages#warriors_gallery'
-  # get 'pages/home'
+  get 'body_measurement_public' => 'pages#body_measurement_public'
   get 'about' => 'pages#about'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
