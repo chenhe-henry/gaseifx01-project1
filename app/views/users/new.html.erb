@@ -23,10 +23,14 @@
         <%= f.label :email %><br />
         <%= f.text_field :email %>
     </div>
-    <div class="field">
-        <%= f.label :gender %><br />
-        <%= f.text_field :gender %>
-    </div>
+<div class="field">
+    <%= f.label :gender_id %><br />
+    <%= f.label :gender_id, "Male", :value => 1  %>
+    <%= f.radio_button :gender_id, 1 %>
+    <%= f.label :gender_id, "Female", :value => 2 %>
+    <%= f.radio_button :gender_id, 2 %>
+  </div>
+ 
     <div class="field">
         <%= f.label :city %><br />
         <%= f.text_field :city %>

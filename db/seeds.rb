@@ -30,5 +30,5 @@
 # syd = Location.create(location: 'Sydney')
 # User.create(user_name: 'Chen He', password_digest: BCrypt::Password.create('Jedi'), age: 30, gender_id: male.id, contact_info_id: chen.id, location_id: syd.id)
 
-# Gender.create(gender: 'Male')
-# Gender.create(gender: 'Female')
+Gender.create(gender: 'Male')
+Gender.create(gender: 'Female')

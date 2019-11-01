@@ -7,7 +7,7 @@
 <p><b>#<%= @user.id %></b></p>
 <p><b>Email:</b> <%= @user.email %></p>
 <p><b>City:</b> <%= @user.city %></p>
-<p><b>Gender:</b> <%= @user.gender%></p>
+<p><b>Gender:</b> <%= @user.gender.gender%></p>
 <p><b>Created at:</b> <%= localize(@user.created_at + 39600, :format => :long) %></p>
 
 

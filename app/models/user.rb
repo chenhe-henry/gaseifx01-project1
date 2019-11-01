@@ -11,7 +11,7 @@ class User < ApplicationRecord
     # validates_uniqueness_of :email
     has_many :body
     has_one_attached :avatar
-
+    belongs_to :gender
 
     
 end
