@@ -19,7 +19,7 @@ class AboutController < ApplicationController
 
   def setting
     @logged_in_user = User.find_by :id => session[:user_id]
-    @line_graph_data = Body.where(:user_id => current_user.id).group(:id).sum(:weight)
+    @line_graph_data = Body.where(:user_id => current_user.id).group_by_day(:created_at).sum(:weight)
     # @bmi = @logged_in_user.initial_weight/@logged_in_user.height/@logged_in_user.height
   end
 
