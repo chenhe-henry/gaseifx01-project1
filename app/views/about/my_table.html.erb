@@ -1,6 +1,6 @@
-<h2>Hi, <%= @logged_in_user.name %>, have a look at what you have done so far.</h2>
+<div class="d-flex flex-row banner7"><b>Hi, <%= @logged_in_user.name %>, <%= @title %></div>
 
-<h1>All Updated Users</h1>
+<h1>Your Records</h1>
 <table class="table table-hover">
 <tr>
 <th scope="col">Id</th>
@@ -8,6 +8,7 @@
 <th scope="col">Height</th>
 <th scope="col">BMI</th>
 <th scope="col">Created at</th>
+<th scope="col"></th>
 </tr>
 
 <% @bodies.each do |body| %>

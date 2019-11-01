@@ -1,6 +1,7 @@
 class BodiesController < ApplicationController
     def new
         @body = Body.new
+        @title = 'Record your lastest body info here.';
     end
     def index
         @bodies = Body.all

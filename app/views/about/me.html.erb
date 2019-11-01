@@ -1,7 +1,9 @@
-<h1><b>Hi, <%= @logged_in_user.name %> from <%= @logged_in_user.city %> ! </b></h1>
-<p><b>email:</b> <%= @logged_in_user.email %></p>
+<div class="d-flex flex-row banner6"><b>Welcome back, <%= @logged_in_user.name %> from <%= @logged_in_user.city %> ! </b></div>
 
-<canvas id="myChart"></canvas>
+<hr>
+<%= line_chart @line_graph_data%>
+
+<%# <canvas id="myChart"></canvas>
 
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -41,4 +43,4 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-</script>
+</script> %>

@@ -16,8 +16,12 @@
 
 
 nav {
-    height: 10%;
+    height: 20%;
 }
+.maincontent {
+    margin-top: 10%;
+}
+
 .navigation {
     margin: auto;
     padding: 40px;
@@ -38,4 +42,26 @@ li {
     float: right;
     
 }
-
+footer{
+  text-align: center;
+}
+.facebook:hover {
+  background-color: rgb(44, 103, 241);
+  color: white;
+}
+.twitter:hover {
+  background-color: rgb(63, 202, 218);
+  color: white;
+}
+.youtube:hover {
+  background-color: red;
+  color: white;
+}
+.pinterest:hover {
+  background-color: white;
+  color: red;
+}
+/* .copyright {
+  text-align: right;
+  color: black;
+} */

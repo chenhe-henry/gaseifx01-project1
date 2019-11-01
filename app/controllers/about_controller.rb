@@ -4,6 +4,7 @@ class AboutController < ApplicationController
     @logged_in_user = User.find_by :id => session[:user_id]
     # @logged_in_user = @current_user.id
     @bodies = Body.all
+    @line_graph_data = Body.where(:user_id => current_user.id).group(:id).sum(:weight)
   end
 
   def my_table
@@ -12,6 +13,8 @@ class AboutController < ApplicationController
         puts @bodies.inspect
         puts "==================================="
     @logged_in_user = User.find_by :id => session[:user_id]
+    @title = 'see how far you have come.';
+   
     # @bmi = @logged_in_user.initial_weight/@logged_in_user.height/@logged_in_user.height
   end
 
@@ -19,7 +22,7 @@ class AboutController < ApplicationController
 
   def setting
     @logged_in_user = User.find_by :id => session[:user_id]
-    @line_graph_data = Body.where(:user_id => current_user.id).group_by_day(:created_at).sum(:weight)
+    # @line_graph_data = Body.where(:user_id => current_user.id).group(:id).sum(:weight)
     # @bmi = @logged_in_user.initial_weight/@logged_in_user.height/@logged_in_user.height
   end
 
