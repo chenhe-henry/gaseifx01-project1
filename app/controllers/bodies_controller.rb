@@ -15,7 +15,7 @@ class BodiesController < ApplicationController
     
     def create
 
-        form_params = params.require(:body).permit(:weight, :height)
+        form_params = params.require(:body).permit(:weight, :date, :height)
 
         puts "===================================="
         puts form_params.inspect
@@ -24,6 +24,7 @@ class BodiesController < ApplicationController
         @body = Body.new
         @body.weight = form_params[:weight]
         @body.height = form_params[:height]
+        @body.date = form_params[:date]
         @body.user_id = session[:user_id]
         @body.save
 

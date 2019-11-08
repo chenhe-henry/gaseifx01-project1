@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_11_01_195627) do
     t.float "weight"
     t.float "bmi"
     t.float "height"
+    t.datetime "date"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+.send_email {
+  color: white;
+}
 
 nav {
     height: 20%;

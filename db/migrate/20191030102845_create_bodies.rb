@@ -4,6 +4,7 @@ class CreateBodies < ActiveRecord::Migration[6.0]
       t.float :weight
       t.float :bmi
       t.float :height
+      t.datetime :date
       t.integer :user_id
       t.timestamps
     end

@@ -87,9 +87,12 @@
   <div class="d-flex flex-column mt-3 ml-5 ">
       <h5>Contact Us</h5>
  
-      <div>123 Carlingford Road</div>
+      <div>123 Sydney Road</div>
       <div>555-55555</div>
-      <div>chenhe@gmail.com</div>
+      <div><%= mail_to "chenhe.elec@gmail.com", cc: "hannaliu59@hotmail.com", subject: "This is a test email." do %>
+          <strong>Email me:</strong> <span>chenhe.elec@gmail.com</span>
+          <% end %>
+      </div>
   </div>
 </div>
   </body>
