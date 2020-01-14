@@ -3,7 +3,7 @@
 <table class="table table-hover">
 <tr>
 <th scope="col">Name</th>
-
+<th scope="col">Photo</th>
 <th scope="col">Gender</th>
 <th scope="col">Location</th>
 <th scope="col">Active Days</th>
@@ -12,7 +12,15 @@
 <% @top.each do |top| %>
 <tr>
 <td><%= top.name %></td>
-
+<td>
+<div>
+<% if top.avatar.attached? %>
+    <%= image_tag top.avatar.variant(resize_to_limit: [80, 80]), class: "rounded-circle" %>
+<% else %>
+    <%= image_tag gravatar_image_url(top.email, size: 80), height: 80, width: 80, class: "rounded-circle" %>
+<% end %>
+</div>
+</td>
 <td><%= top.gender.gender %></td>
 <td><%= top.city %></td>
 <td><%= top.id %></td>
