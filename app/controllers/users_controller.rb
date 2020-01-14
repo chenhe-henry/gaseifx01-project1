@@ -14,14 +14,14 @@ class UsersController < ApplicationController
     
 
     def update
-         @user = User.find(params[:id])
-        form_params = params.require(:user).permit(:name, :avatar, :email, :city)
+        @user = User.find(params[:id])
+        form_params = params.require(:user).permit(:name, :email, :city)
         puts "===================================="
         puts "USER ID: " + @user.id.to_s
         puts form_params.inspect
         puts "==================================="
         @user.name = form_params[:name]
-        @user.avatar = form_params[:avatar]
+   
         @user.email = form_params[:email]
         @user.city = form_params[:city]
         # @user.update(form_params)
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
     private
    
     def get_create_user_form_params
-        params.require(:user).permit(:name, :avatar, :email, :gender_id, :city, :password, :password_confirmation)
+        params.require(:user).permit(:name,  :email, :gender_id, :city, :password, :password_confirmation)
     end
 
   

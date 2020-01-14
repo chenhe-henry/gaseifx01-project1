@@ -1,9 +1,7 @@
 <!-- display selected user's info-->
 
 <h2><%= @user.name %></h2>
-<% if @user.avatar.attached? %>
-<image src="<%=(url_for(@user.avatar))%>">
-<% end %>
+
 <p><b>#<%= @user.id %></b></p>
 <p><b>Email:</b> <%= @user.email %></p>
 <p><b>City:</b> <%= @user.city %></p>
