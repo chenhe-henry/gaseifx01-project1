@@ -5,10 +5,10 @@ class AboutController < ApplicationController
     # @logged_in_user = @current_user.id
     @bodies = Body.all
     # @line_graph_data = Body.where(:user_id => current_user.id).group(:id).sum(:weight)
-    @line_graph_data1 = Body.where(:user_id => current_user.id).group_by_day(:date, format: "%e").average(:weight)
-     puts "===================================="
-        puts @line_graph_data1.inspect
-        puts "==================================="
+    # @line_graph_data1 = Body.where(:user_id => current_user.id).group_by_day(:date, format: "%e").average(:weight)
+    #  puts "===================================="
+    #     puts @line_graph_data1.inspect
+    #     puts "==================================="
     @result = {}
     Body.where(:user_id => current_user.id).each do |body|
       @result[body.date.day] = body.weight
